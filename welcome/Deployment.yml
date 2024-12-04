@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind:   Deployment
+metadata:
+   name: welcome
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: welcome
+  template:
+    metadata:
+      labels:
+        app: welcome
+    spec:
+      containers:
+      - name: new-welcome-service
+        image: docker.io/shireesha398/welcome.jar:latest
+        imagePullPolicy: IfNotPresent
+        resources:
+          limits:
+            memory: "200Mi"
+            cpu: "1"
+          requests:
+            memory: "100Mi"
+            cpu: "100m"
+        ports:
+        - containerPort: 9600

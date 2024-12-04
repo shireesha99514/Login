@@ -1,0 +1,78 @@
+
+
+<body>
+    
+     
+     <form [formGroup]="register" (ngSubmit)="handleSubmit()">
+       <div class="form-field">
+         <label for="email">Email</label>
+         <input
+           type="email"
+           id="email"
+           placeholder="Please enter your email"
+           formControlName="email"
+         />
+         <div *ngIf="register.get('email')?.invalid && register.get('email')?.touched" class="error-message">
+           <small *ngIf="register.get('email')?.errors?.['required']">Email is required.</small>
+           <small *ngIf="register.get('email')?.errors?.['email']">Invalid email format.</small>
+         </div>
+       </div>
+     
+       <div class="form-field">
+         <label for="name">Name</label>
+         <input
+           type="text"
+           id="name"
+           placeholder="Please enter your Name"
+           formControlName="name"
+         />
+         <div *ngIf="register.get('name')?.invalid && register.get('name')?.touched" class="error-message">
+           <small *ngIf="register.get('name')?.errors?.['required']">Name is required.</small>
+           <small *ngIf="register.get('name')?.errors?.['minlength']">
+             Name must be at least 3 characters long.
+           </small>
+         </div>
+       </div>
+     
+       <div class="form-field">
+         <label for="Mnumber">Mobile Number</label>
+         <input
+           type="number"
+           id="Mnumber"
+           placeholder="Please enter your Mobile Number"
+           formControlName="mobile"
+         />
+         <div *ngIf="register.get('mobile')?.invalid && register.get('mobile')?.touched" class="error-message">
+           <small *ngIf="register.get('mobile')?.errors?.['required']">
+             Mobile number is required.
+           </small>
+           <small *ngIf="register.get('mobile')?.errors?.['pattern']">
+             Mobile number must be 10 digits long.
+           </small>
+         </div>
+       </div>
+     
+       <div class="form-field">
+         <label for="password">Password</label>
+         <input
+           type="password"
+           id="password"
+           placeholder="Please enter your password"
+           formControlName="password"
+         />
+         <div *ngIf="register.get('password')?.invalid && register.get('password')?.touched" class="error-message">
+           <small *ngIf="register.get('password')?.errors?.['required']">
+             Password is required.
+           </small>
+           <small *ngIf="register.get('password')?.errors?.['minlength']">
+             Password must be at least 6 characters long.
+           </small>
+         </div>
+       </div>
+     
+       <div class="form-actions">
+         <button type="submit" [disabled]="register.invalid">Register</button>
+         <a routerLink="/login">Already registered?</a>
+       </div>
+     </form>
+     </body>

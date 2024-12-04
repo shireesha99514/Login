@@ -1,0 +1,115 @@
+/* General form styles */
+form {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #9edcba;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Header styling */
+  .form-header {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .sub-header {
+    text-align: center;
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Form field styling */
+  .form-field {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  input[type="email"],
+  input[type="text"],
+  input[type="number"],
+  input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    outline: none;
+    box-sizing: border-box;
+  }
+  
+  input[type="email"]:focus,
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  input[type="password"]:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+  }
+  
+  input[type="password"] {
+    background-color: #f9f9f9;
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: #f44336;
+    font-size: 0.9rem;
+    margin-top: 4px;
+  }
+  
+  small {
+    display: block;
+  }
+  
+  /* Submit button styling */
+  button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  button[type="submit"]:disabled {
+    background-color: #bdbdbd;
+    cursor: not-allowed;
+  }
+  
+  /* Actions container */
+  .form-actions {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  a {
+    font-size: 1rem;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+ 
+  

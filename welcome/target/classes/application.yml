@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: Docker_Project3-3
+server:
+  port:  9600
+

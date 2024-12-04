@@ -1,0 +1,32 @@
+<div class="login-container">
+    
+    <form [formGroup]="data" (ngSubmit)="handleSubmit()" class="login-form">
+        <p>Registerd Successfully ....</p>
+      <h2>Login</h2>
+  
+      <!-- Display any error message -->
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  
+      <!-- User ID input field -->
+      <div>
+       
+        <input id="userId" formControlName="userId" placeholder="Enter your username" />
+        <div *ngIf="formControls.userId.touched && formControls.userId.invalid">
+          <small *ngIf="formControls.userId.errors?.['required']">User ID is required.</small>
+        </div>
+      </div>
+  
+      <!-- Password input field -->
+      <div>
+      
+        <input id="password" type="password" formControlName="password" placeholder="Enter your password" />
+        <div *ngIf="formControls.password.touched && formControls.password.invalid">
+          <small *ngIf="formControls.password.errors?.['required']">Password is required.</small>
+        </div>
+      </div>
+  
+      <!-- Submit button -->
+      <button type="submit" [disabled]="data.invalid">Login</button>
+    </form>
+  </div>
+  
